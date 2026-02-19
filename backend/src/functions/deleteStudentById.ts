@@ -39,6 +39,6 @@ export async function deleteStudentById(request: HttpRequest, context: Invocatio
 app.http('deleteStudentById', {
   methods: ['DELETE'],
   authLevel: 'anonymous',
-  route: 'students/{StudentId}',
+  route: 'students/{StudentId:int}',
   handler: deleteStudentById
 });

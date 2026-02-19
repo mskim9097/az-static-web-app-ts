@@ -49,6 +49,6 @@ export async function updateStudent(request: HttpRequest, context: InvocationCon
 app.http('updateStudent', {
   methods: ['PUT', 'PATCH'],
   authLevel: 'anonymous',
-  route: 'students/{StudentId}',
+  route: 'students/{StudentId:int}',
   handler: updateStudent
 });

@@ -17,6 +17,9 @@ const NavBar: React.FC = () => {
             <li className="nav-item">
               <NavLink className="nav-link" to="/add">Add Student</NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/count">Number of students</NavLink>
+            </li>
           </ul>
         </div>
       </div>

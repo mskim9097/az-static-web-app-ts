@@ -100,10 +100,24 @@ export const deleteStudent = async (studentId: number): Promise<Student | {}> =>
     return await response.json();
 };
 
+export const fetchStudentsCount = async (): Promise<string> => {
+  console.log('Fetching students count from:', `${BASE_URL}/students/count`);
+  const response = await fetch(`${BASE_URL}/students/count`, {
+    headers: { Accept: 'text/plain' }
+  });
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch students count');
+  }
+
+  return await response.text();
+};
+
 export default {
     fetchStudents,
     getStudent,
     addStudent,
     updateStudent,
-    deleteStudent
+    deleteStudent,
+    fetchStudentsCount
 };
